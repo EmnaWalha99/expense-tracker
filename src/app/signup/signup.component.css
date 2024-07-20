@@ -1,0 +1,177 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Rest of your section styles */
+section {
+    width: 80%;
+    max-width: 400px;
+    height: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    /*
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    */
+    
+}
+
+section div {
+    margin-bottom: 15px;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+section hr {
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+}
+
+section form {
+    display: flex;
+    flex-direction: column;
+}
+
+section form div {
+    margin-bottom: 15px;
+}
+
+section label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+section input[type="text"],
+section input[type="email"],
+section input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+
+section input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #45a049;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+section input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+section a {
+    display: block;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+
+section a:hover {
+    text-decoration: underline;
+}
+
+section {
+    width: 90%;
+    height: 560px;
+    max-width: 400px ;
+    margin: 20px auto;
+    padding: 20px;
+    /*
+    border: 2px solid rgba(0, 0, 0, 0.1); 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    background-color: #f9f9f9; 
+    box-sizing: border-box; 
+    */
+}
+
+section div {
+    margin-bottom: 15px;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+section hr {
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+}
+
+section form {
+    display: flex;
+    flex-direction: column;
+}
+
+section form div {
+    margin-bottom: 15px;
+}
+
+section label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+section input[type="text"],
+section input[type="email"],
+section input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+section input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #45a049;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+section input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+section a {
+    display: block;
+    text-align: center;
+    color :black ;
+    text-decoration: none;
+}
+
+section a:hover {
+    text-decoration: underline;
+}

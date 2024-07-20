@@ -1,0 +1,45 @@
+body{
+    background-image: url("bg5.jpg");
+    background-size:65%;
+   background-position: right top;
+   background-repeat: no-repeat;
+}
+
+section h2{
+    text-decoration: solid;
+    font-size: 3.2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(79, 136, 92);
+}
+section p{
+    font-family:cursive
+    font-weight: bold;
+    /*color: rgb(82, 49, 3);*/
+    color: black ;
+    font-size: 1.1rem;
+    text-justify: center;
+}
+.descrip{
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    padding-left: 100px;
+}
+.btn
+{
+    color:rgb(79, 136, 92);
+    /*background-color: white;*/
+    border-color:rgb(79, 136, 92);
+    padding: 0.4rem 0.9rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 15px;
+    border-width: 1px;
+    width: 150px;
+  }
+  .btn:hover{
+    background-color:rgb(238, 221, 215);
+    /*color: rgba(176, 106, 106, 0.605);*/
+    
+  }

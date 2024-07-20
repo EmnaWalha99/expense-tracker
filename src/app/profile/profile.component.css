@@ -1,0 +1,19 @@
+.container {
+    position: absolute; /* or relative, depending on context */
+    left: 260px;
+    top: 10px;
+    bottom: 10px;
+    right: 10px;
+    
+    border-radius: 10px;
+    background-color: #f0f0f0; /* Example background color */
+    padding: 20px; /* Optional, adjust as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional, for depth */
+}
+
+@media (max-width: 768px) {
+    .container{
+        left: 200px;
+    }
+}
+

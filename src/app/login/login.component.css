@@ -1,0 +1,111 @@
+body{
+    background-color:beige;
+}
+section {
+    justify-content: center;
+    width: 90%;
+    max-width: 400px; /* Set a max width for larger screens */
+    margin: 100px auto ; /* Add some top margin for spacing */
+    padding: 20px;
+    
+}
+hr {
+    width: 90%;
+}
+
+
+section div {
+    margin-bottom: 15px;
+}
+
+section h2 {
+    text-align: left;
+    margin-bottom: 0px;
+}
+section h5{
+    font-weight:lighter
+}
+section hr {
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+}
+
+section form {
+    display: flex;
+    flex-direction: column;
+}
+
+section form div {
+    margin-bottom: 15px;
+}
+
+section label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+section input[type="email"],
+section input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+section input[type="submit"] {
+    width: 90%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+section input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+section a {
+    display: block;
+    text-align: center;
+   
+    text-decoration: none;
+}
+
+section a:hover {
+    text-decoration: underline;
+}
+#register-url {
+    color :black;
+    padding-right: 40px;
+}
+/* Media queries for responsiveness */
+@media (min-width: 576px) {
+    section {
+        width: 80%;
+    }
+}
+
+@media (min-width: 768px) {
+    section {
+        width: 70%;
+    }
+}
+
+@media (min-width: 992px) {
+    section {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1200px) {
+    section {
+        width: 50%;
+    }
+}
