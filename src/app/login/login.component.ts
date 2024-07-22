@@ -36,7 +36,7 @@ export class LoginComponent {
         this.authService.login(this.loginForm.value).subscribe({
           next: (data: any) => {
             console.log('Login successful:', data);
-            this.router.navigate(['/dashbord']); // Correct path
+            this.router.navigate(['/profile']); // => the the profile
           },
           error: (err) => {
             console.error('Login failed:', err);

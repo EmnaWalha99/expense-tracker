@@ -1,14 +1,13 @@
 import { Routes } from '@angular/router';
+import { DashbordComponent } from './account/account.component';
 import { AddexpenseComponent } from './addexpense/addexpense.component';
 import { AdminComponent } from './admin/admin.component';
 import { authGuard } from './auth/auth.guard';
-import { DashbordComponent } from './dashbord/dashbord.component';
 import { HomeComponent } from './home/home.component';
 import { InsightsComponent } from './insights/insights.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ScanreceiptComponent } from './scanreceipt/scanreceipt.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
 import { SignupComponent } from './signup/signup.component';
 
 export const routes: Routes = [
@@ -20,40 +19,46 @@ export const routes: Routes = [
     {
         path :'login',
         component :LoginComponent,
+        /*
         children: [
-            { path: 'dashbord', component: DashbordComponent}
+            { path: 'profile', component:ProfileComponent ,}
             
-          ]
+          ]*/
     },
     {
         path : 'signup' , 
         component :SignupComponent ,
     },
     {
-        path : 'dashbord',
-        component :DashbordComponent,
+        path : 'account',
+        component :DashbordComponent
         //canActivate :[authGuard],
     },
     {
-        path : 'sidebar',
-        component:SidebarComponent,
-    }
-    ,{
         path :'profile',
         component:ProfileComponent,
-    },{
+        canActivate :[authGuard],
+
+    }
+    ,{
         path: 'addexpense',
         component : AddexpenseComponent,
+        //canActivate :[authGuard],
+
     }
     ,{
         path :'admin' , component:AdminComponent,
-        canActivate :[authGuard],
+        //canActivate :[authGuard],
     },{
         path : 'scanreceipt' , 
         component :ScanreceiptComponent,
+        //canActivate :[authGuard],
+
     },
     {
         path :'insights',
         component :InsightsComponent,
+        canActivate :[authGuard],
+
     }
 ] ; 
