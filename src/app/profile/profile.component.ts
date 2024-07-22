@@ -9,10 +9,9 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
   standalone: true,
   
   imports: [RouterOutlet,SidebarComponent,NgIf,CommonModule],
-  templateUrl: './profile.component.html',
-  
+  templateUrl:   './profile.component.html',
 
-  styleUrl: './profile.component.css'
+  styleUrl: './profile.component.css',
 })
 export class ProfileComponent implements OnInit {
 
@@ -21,5 +20,8 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit(): void {
       this.user=this.authService.getUser();
+      console.log(this.user);
+    
   }
+
 }

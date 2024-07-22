@@ -6,7 +6,10 @@ import { AuthService } from '../auth/auth.service';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [RouterOutlet,RouterLink,ReactiveFormsModule,RouterModule],
+  imports: [RouterOutlet,RouterLink,ReactiveFormsModule,RouterModule
+    
+    
+  ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -24,6 +27,7 @@ export class LoginComponent {
         this.authService.login(this.loginForm.value).subscribe({
           next: (data: any) => {
             console.log('Login successful:', data);
+            
             this.router.navigate(['/profile']); // => the the profile
           },
           error: (err) => {

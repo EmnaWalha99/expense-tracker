@@ -10,7 +10,7 @@ export class AuthService {
   httpClient =inject(HttpClient);
   baseUrl='http://localhost:3000';
   //consistant key for local storage
-  private localStorageKey='authUser';
+  localStorageKey='authUser';
   signup(data: any){
     return this.httpClient.post(`${this.baseUrl}/signup`,data);
 
@@ -18,7 +18,7 @@ export class AuthService {
   login(data: any){
     return this.httpClient.post(`${this.baseUrl}/login`,data)
     .pipe(tap((result) =>{
-      localStorage.setItem('autheUser',JSON.stringify(result));
+      localStorage.setItem('authUser',JSON.stringify(result));
     }
     ));
   }
