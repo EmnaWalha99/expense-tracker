@@ -16,11 +16,15 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
 export class ProfileComponent implements OnInit {
 
   user: any;
+  
+
   private authService=inject(AuthService);
+  username=this.authService.getUser().username;
+  email=this.authService.getUser().email;
 
   ngOnInit(): void {
       this.user=this.authService.getUser();
-      console.log(this.user);
+      
     
   }
 
