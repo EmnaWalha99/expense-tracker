@@ -4,8 +4,10 @@ import { AdminComponent } from './admin/admin.component';
 import { authGuard } from './auth/auth.guard';
 import { DashbordComponent } from './dashbord/dashbord.component';
 import { HomeComponent } from './home/home.component';
+import { InsightsComponent } from './insights/insights.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ScanreceiptComponent } from './scanreceipt/scanreceipt.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SignupComponent } from './signup/signup.component';
 
@@ -46,5 +48,12 @@ export const routes: Routes = [
     ,{
         path :'admin' , component:AdminComponent,
         canActivate :[authGuard],
+    },{
+        path : 'scanreceipt' , 
+        component :ScanreceiptComponent,
+    },
+    {
+        path :'insights',
+        component :InsightsComponent,
     }
 ] ; 
