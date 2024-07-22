@@ -19,11 +19,11 @@ export const routes: Routes = [
     {
         path :'login',
         component :LoginComponent,
-        /*
+        
         children: [
             { path: 'profile', component:ProfileComponent ,}
             
-          ]*/
+          ]
     },
     {
         path : 'signup' , 
@@ -37,7 +37,7 @@ export const routes: Routes = [
     {
         path :'profile',
         component:ProfileComponent,
-        canActivate :[authGuard],
+        //canActivate :[authGuard],
 
     }
     ,{
