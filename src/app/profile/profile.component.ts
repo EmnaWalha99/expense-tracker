@@ -1,31 +1,43 @@
 import { CommonModule, NgIf } from '@angular/common';
-import { Component, OnInit, inject } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject, OnInit } from '@angular/core';
+import { Router, RouterOutlet } from '@angular/router';
 import { AuthService } from '../auth/auth.service';
 import { SidebarComponent } from '../sidebar/sidebar.component';
-
 @Component({
   selector: 'app-profile',
   standalone: true,
   
-  imports: [RouterOutlet,SidebarComponent,NgIf,CommonModule],
-  templateUrl:   './profile.component.html',
-
-  styleUrl: './profile.component.css',
+  imports: [RouterOutlet, SidebarComponent, NgIf, CommonModule],
+  templateUrl: './profile.component.html',
+  styleUrls: ['./profile.component.css'],
 })
 export class ProfileComponent implements OnInit {
 
   user: any;
-  
+  username: string | undefined; 
+  email: string | undefined; 
 
-  private authService=inject(AuthService);
-  username=this.authService.getUser().username;
-  email=this.authService.getUser().email;
-
+  // dependency injection
+  authService = inject(AuthService);
+  router=inject(Router);
   ngOnInit(): void {
-      this.user=this.authService.getUser();
-      
-    
+    this.user = this.authService.getUser();
+    console.log(this.user);
+
+    if (this.user) {
+      this.username = this.user.username;
+      this.email = this.user.email;
+      //just for debugging
+      console.log('Username:', this.username);
+      console.log('Email:', this.email);
+      console.log('LocalStorage:', localStorage.getItem('authUser'));
+    } else {
+      console.error("User not found in local storage.");
+    }
+  }
+  public logout(){
+    this.authService.logout() ;
+    this.router.navigate(['/login']);
   }
 
 }

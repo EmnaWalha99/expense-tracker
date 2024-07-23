@@ -17,8 +17,10 @@ export class AuthService {
   }
   login(data: any){
     return this.httpClient.post(`${this.baseUrl}/login`,data)
-    .pipe(tap((result) =>{
-      localStorage.setItem('authUser',JSON.stringify(result));
+    .pipe(tap((result:any) =>{
+      localStorage.setItem('authUser',JSON.stringify(result.user));
+    
+
     }
     ));
   }
@@ -29,8 +31,10 @@ export class AuthService {
     
     return localStorage.getItem('authUser') !== null ;
   }
-  getUser(){
+  getUser() {
     const userJson = localStorage.getItem(this.localStorageKey);
-    return userJson ? JSON.parse(userJson):null
+    return userJson ? JSON.parse(userJson) : null;
   }
+  
+
 }

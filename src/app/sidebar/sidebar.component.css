@@ -26,7 +26,7 @@
 .sidebar ul a {
     display: block;
     width: 100%;
-    line-height: 65px;
+    line-height: 75px;
     font-size: 20px;
     color: rgb(43, 58, 47);
     padding-left: 40px;
@@ -91,6 +91,22 @@ label #cancel {
     
     
 }
+/* Styling for sign-out button */
+.signout-btn {
+    /*position: absolute;*/
+    bottom: 20px;
+    left: -50px;
+    width: 100%; 
+    padding: 15px;
+    font-size: 1rem;
+    color: black;
+    background-color:transparent; 
+    text-align: center; 
+    cursor: pointer; 
+    
+}
+
+
 /*
 #check:checked ~ label #cancel {
     left: 195px;
@@ -103,7 +119,9 @@ label #cancel {
         left: -250px;
         
     }
-     
+     a i{
+        font-size: small;
+     }
 
     #check:checked ~ .sidebar {
         left: 0px;
@@ -118,6 +136,9 @@ label #cancel {
     #check:checked ~ #btn{
         position: fixed;
     
+    }
+    .sidebar ul a {
+        line-height: 50px;
     }
 }
 

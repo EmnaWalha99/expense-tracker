@@ -31,28 +31,28 @@ export const routes: Routes = [
     },
     {
         path : 'account',
-        component :DashbordComponent
-        //canActivate :[authGuard],
+        component :DashbordComponent ,
+        canActivate :[authGuard],
     },
     {
         path :'profile',
         component:ProfileComponent,
-        //canActivate :[authGuard],
+        canActivate :[authGuard],
 
     }
     ,{
         path: 'addexpense',
         component : AddexpenseComponent,
-        //canActivate :[authGuard],
+        canActivate :[authGuard],
 
     }
     ,{
         path :'admin' , component:AdminComponent,
-        //canActivate :[authGuard],
+        canActivate :[authGuard],
     },{
         path : 'scanreceipt' , 
         component :ScanreceiptComponent,
-        //canActivate :[authGuard],
+        canActivate :[authGuard],
 
     },
     {
