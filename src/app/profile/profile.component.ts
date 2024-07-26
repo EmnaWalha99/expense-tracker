@@ -27,7 +27,6 @@ export class ProfileComponent implements OnInit {
     if (this.user) {
       this.username = this.user.username;
       this.email = this.user.email;
-      //just for debugging
       console.log('Username:', this.username);
       console.log('Email:', this.email);
       console.log('LocalStorage:', localStorage.getItem('authUser'));
