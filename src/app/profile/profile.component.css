@@ -1,12 +1,13 @@
 .container {
     position: absolute; /* or relative, depending on context */
-    left: 260px;
-    top: 10px;
-    bottom: 10px;
-    right: 10px;
-    
+    left: 250px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    align-items: center;
+    justify-content: center;
     border-radius: 10px;
-    background-color: #f0f0f0; /* Example background color */
+    background-color: #c4e4d5; /* Example background color */
     padding: 20px; /* Optional, adjust as needed */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional, for depth */
 }
@@ -15,6 +16,37 @@
     .container{
         left: 200px;
     }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"]
+     {
+      min-width: 200px;
+    }
+    h2{
+      font-size: 15px;
+    }
+    
+   
+
+}
+@media (min-width: 768px) {  
+  .form-group {
+    display : flex ;
+    align-items: center; 
+    justify-content:space-around; 
+  }
+
+  label {
+    margin-right: 0px;
+    width: 120px; 
+    float : left ;
+  }
+  .box{
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 30px;
+    
+  }
 }
 
   
@@ -24,47 +56,45 @@ body {
   }
 
   h2 {
+    
     text-align: center;
+    font-size: 35px;
     margin-bottom: 30px;
+    color:rgb(158, 114, 183);
+
   }
 
   .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   
-  @media (min-width: 768px) {  
-    .form-group {
-      display : flex ;
-      align-items: center; 
-      justify-content: space-between; 
-    }
-
-    label {
-      margin-right: 10px;
-      width: 120px; 
-      float : left ;
-    }
-  }
+  
 
   
   label {
     display: block;
     margin-bottom: 5px;
+    margin-right: -20px;
     font-weight: bold;
-    padding-left: 70px;
+    font-size: 17px;
+    margin-left: 70px;
+    color:#092b19;
   }
 
   input[type="text"],
   input[type="email"],
   input[type="number"]
   select {
-    width: 60%;
-    padding: 10px;
+    width: 55%;
+    
+    margin-right: 50px;
+    padding-left: 20px;
     border: 1px solid #f8f1f1;
     border-radius: 17px;
     box-sizing: border-box;
     height: 50px;
+    
 
   }
 
@@ -77,19 +107,35 @@ body {
   
 
   button[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
+    background-color: rgb(32, 121, 101);
+
+    color:rgb(237, 219, 237);
     padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 14px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
     margin-top: 10px;
     float: right;
+    margin-right: 75px;
   }
 
   button[type="submit"]:hover {
-    background-color: #3e8e41;
+    
   }
 
   
+  .box  {
+    flex: 1 1 100%;
+    height: 500px;
+    width: 620px;
+    
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background-color: rgb(236, 242, 244);
+    justify-content: center;
+    
+    
+
+    
+  }

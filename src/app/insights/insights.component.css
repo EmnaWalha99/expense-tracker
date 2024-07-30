@@ -1,19 +1,95 @@
+/* Container Styles */
 .container {
     position: absolute; /* or relative, depending on context */
-    left: 260px;
-    top: 10px;
-    bottom: 10px;
-    right: 10px;
-    
+    left: 250px;
+    top: 0;
+    bottom: 0;
+    right: 0;
     border-radius: 10px;
-    background-color: #f0f0f0; /* Example background color */
-    padding: 20px; /* Optional, adjust as needed */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional, for depth */
+    background-color: #c4e4d5; /* Light grey background */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    overflow-y: auto; /* Adds scroll if content exceeds height */
 }
-
 @media (max-width: 768px) {
     .container{
         left: 200px;
     }
 }
+@media (min-width:768px){
+  .box:hover {
+    height: 300px;
+    width: 400px;
+    transition:linear;
+    z-index: 10;
+    
+  }
+  .box2:hover {
+    height: 300px;
+    width: 400px;
+    transition: linear;
+    z-index: 10;
+    
+  }
+}
 
+
+.box  {
+    flex: 1 1 100%;
+    height: 270px;
+    width: 370px;
+    
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background-color: rgb(236, 242, 244);
+
+    
+  }
+  .box2 {
+    margin-top: 20px;
+    flex: 1 1 100%;
+    height: 250px;
+    width: 350px;
+    border: 1px solid #ddd;
+
+
+    border-radius: 20px;
+    background-color: rgb(236, 242, 244);
+    
+  }
+ 
+  .box:hover .box2:hover{
+    background-color: rgb(208, 215, 217);
+
+
+
+  }
+ 
+.box canvas  {
+
+  height: 200px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+}
+div .monthly {
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: white;
+  width: 200px;
+  height: 100px;
+  color: black;
+  font-size: 30px;
+  display: flex;
+  float :right;
+  justify-content: center;
+
+}
+.grid {
+  display: grid;
+  margin-left:60px;
+  grid-template-columns: repeat(2, 1fr); /* 4 equal columns */
+  gap: 20px; /* Space between items */
+}

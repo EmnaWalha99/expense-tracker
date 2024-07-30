@@ -1,0 +1,86 @@
+<app-sidebar></app-sidebar>
+<div class="container">
+    <header>
+      <p>YOUR TOTAL EXPENSES: {{ totalExpenses }}</p>
+    </header>
+    
+  
+    <h2>Monthly Expenses</h2>
+    <table *ngIf="monthlyExpenses.length">
+      <thead>
+        <tr>
+          <th>Month</th>
+          <th>Total Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let expense of monthlyExpenses">
+          <td>{{ expense.month  |date :'MMMM YYYY'}}</td>
+          <td>{{ expense.totalamount }}</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <p *ngIf="!monthlyExpenses.length">No data available</p>
+  
+    <h2>Weekly Expenses</h2>
+    <table *ngIf="weeklyExpenses.length">
+      <thead>
+        <tr>
+          <th>From</th>
+          <th>To</th>
+          <th>Total Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let expense of weeklyExpenses">
+          <td>{{expense.week_start}}</td>
+          <td>{{expense.week_end}}</td>
+            <td>{{ expense.totalamount }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <p *ngIf="!weeklyExpenses.length">No data available</p>
+  
+    <h2>Monthly Expenses by Category</h2>
+    <table *ngIf="monthlyCategoryExpenses.length">
+      <thead>
+        <tr>
+          <th>Month</th>
+          <th>Category</th>
+          <th>Total Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let expense of monthlyCategoryExpenses">
+          <td>{{ expense.month | date: 'MMMM yyyy' }}</td>
+          <td>{{ expense.categoryname }}</td>
+          <td>{{ expense.totalamount  }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <p *ngIf="!monthlyCategoryExpenses.length">No data available</p>
+  
+    <h2>Weekly Expenses by Category</h2>
+    <table *ngIf="weeklyCategoryExpenses.length">
+      <thead>
+        <tr>
+          <th>From</th>
+          <th>To</th>
+          <th>Category</th>
+          <th>Total Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let expense of weeklyCategoryExpenses">
+          <td>{{ expense.week_start}}</td>
+          <td>{{ expense.week_end}}</td>
+          <td>{{ expense.categoryname }}</td>
+          <td>{{ expense.totalamount }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <p *ngIf="!weeklyCategoryExpenses.length">No data available</p>
+  </div>
+  
+<router-outlet></router-outlet>

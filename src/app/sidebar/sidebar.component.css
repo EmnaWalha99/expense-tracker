@@ -12,23 +12,29 @@
 
     width: 250px;
     height: 100%;
-    background-color: whitesmoke;
+   /*background-color:  #092b19;*/
+  background-color:rgb(14, 14, 62);
+  background-color: rgb(1, 46, 61);
+  background-color: whitesmoke;
     transition: all 0.5s;
 }
 
 .sidebar header {
-    font-size: 24px;
-    text-align: center;
-    line-height: 70px;
+    padding-top: 80px;
+    color: rgb(32, 121, 101);
+    font-size: 35px;
+    text-align: left;
+    padding-left: 40px;
+    line-height: 45px;
     font-weight: bold;
 }
 
 .sidebar ul a {
     display: block;
     width: 100%;
-    line-height: 75px;
+    line-height: 50px;
     font-size: 20px;
-    color: rgb(43, 58, 47);
+    color: rgb(35, 61, 56);
     padding-left: 40px;
     box-sizing: border-box;
     transition: 0.4s;
@@ -36,6 +42,7 @@
 
 ul li:hover a {
     padding-left: 50px;
+    font-weight: 800;
 }
 
 .sidebar ul a i {
@@ -43,15 +50,16 @@ ul li:hover a {
 }
 
 .signout-btn {
-    padding-top: 80px;
     padding-left: 40px;
     font-size: 1rem;
-    color: black;
+    color:  rgb(35, 61, 56);
 }
 
 ul li:hover i {
-    color: rgb(123, 151, 81);
+    color: rgb(32, 121, 101);
+
 }
+
 
 #check {
     display: none;
@@ -97,13 +105,19 @@ label #cancel {
     bottom: 20px;
     left: -50px;
     width: 100%; 
-    padding: 15px;
+    padding: 10px;
     font-size: 1rem;
-    color: black;
+    color:rgb(35, 61, 56);
     background-color:transparent; 
-    text-align: center; 
+    text-align: left; 
+    padding-top: 20px;
+    padding-left: 20px;
+
     cursor: pointer; 
     
+}
+.signout-btn:hover{
+    color: rgb(32, 121, 101);
 }
 
 
@@ -119,10 +133,20 @@ label #cancel {
         left: -250px;
         
     }
-     a i{
-        font-size: small;
-     }
+    .sidebar header {
+        font-size: 30px;
+        padding-left: 20px;
+    }
+    
+    
+    .sidebar a ul i{
+        font-size: 10px;
+        padding-left: 10px;
 
+
+     }
+     
+     
     #check:checked ~ .sidebar {
         left: 0px;
     }
@@ -138,7 +162,7 @@ label #cancel {
     
     }
     .sidebar ul a {
-        line-height: 50px;
+        line-height: 40px;
     }
 }
 
@@ -152,6 +176,7 @@ label #cancel {
     }
     #check:checked ~ .sidebar {
         left: -250px;
+
     }
 /*
     label #btn {

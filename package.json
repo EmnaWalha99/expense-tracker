@@ -21,7 +21,12 @@
     "@angular/platform-browser-dynamic": "^18.0.0",
     "@angular/router": "^18.0.0",
     "@fortawesome/fontawesome-free": "^6.6.0",
+    "angular-highcharts": "^17.0.1",
+    "apexcharts": "^3.51.0",
+    "chart.js": "^4.4.3",
     "cors": "^2.8.5",
+    "ng-apexcharts": "^1.11.0",
+    "ng2-charts": "^6.0.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"

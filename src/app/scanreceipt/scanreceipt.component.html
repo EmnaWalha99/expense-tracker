@@ -1,20 +1,17 @@
 <app-sidebar></app-sidebar>
 <div class="container">
-    <form id="receipt-form" class="form-group">
-        <div class="form-field">
-            <label for="receipt-file">Upload Receipt</label>
+    <form >
+        <div class="form-group">
+            <header>
+            <label for="receipt-file">Upload Your Receipt</label>
+            </header>
             <br>
-            <i class="fas fa-file-invoice"></i>
-            <input type="file" id="receipt-file" name="receipt" accept="*" required>
+            <input type="file" id="receipt-file"  required>
         </div>
-        <div class="form-field">
+        <div class="form-group">
             <br>
-            <button type="submit">Scan Receipt</button>
-
+            <button type="submit">Submit</button>
         </div>
     </form>
-    
-    
-  
 </div>
 <router-outlet></router-outlet>

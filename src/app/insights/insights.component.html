@@ -1,7 +1,40 @@
 
 <app-sidebar></app-sidebar>
 <div class="container">
+  
 
-
+  <!--
+  <header>
+    Today's date:{{currentMonth | date: 'MMMM YYYY'}}
+    <br>
+    Total Expenses {{totalExpenses}}
+  </header>
+  -->
+  
+    
+  <div class="grid">
+    <div class="box col-lg-3" (click)="toggleSize($event)">
+      <canvas id="barchart" height="210"></canvas>
+    </div>
+    
+    <div class="box col-lg-3" (click)="toggleSize($event)">
+      <canvas id="piechart" style="margin-left: 40px; margin-top: 10px;"></canvas>
+    </div>
+    
+    <div class="box col-lg-3" (click)="toggleSize($event)">
+      <canvas id="linechart" height="210"></canvas>
+    </div>
+    
+    <div class="box col-lg-3" (click)="toggleSize($event)">
+      <canvas id="doughnutchart" height="210"></canvas>
+    </div>
+  </div>
+  
+  
+  
 </div>
+ 
+    
+  
+  
 <router-outlet></router-outlet>

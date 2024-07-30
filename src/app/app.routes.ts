@@ -9,6 +9,8 @@ import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ScanreceiptComponent } from './scanreceipt/scanreceipt.component';
 import { SignupComponent } from './signup/signup.component';
+import { TrackerComponent } from './tracker/tracker.component';
+
 
 export const routes: Routes = [
     {
@@ -60,5 +62,10 @@ export const routes: Routes = [
         component :InsightsComponent,
         canActivate :[authGuard],
 
+    },
+    {
+        path:'track-expenses',
+        component: TrackerComponent,
+        canActivate:[authGuard],
     }
 ] ; 

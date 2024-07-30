@@ -1,31 +1,33 @@
 <app-sidebar></app-sidebar>
 <div class="container">
     
-
+  <div class="box">
     <h2>Profile</h2>
+    
     <!--
     <p> hello {{username}} <br>
     your email {{email}}</p>
     -->
     
-    <form action="#">  <div class="form-group">
-    <label for="name">Username:</label>
+    <form [formGroup]="profileForm"   (ngSubmit)="onSubmit()">
+      <div class="form-group">
+    <label for="name">Username</label>
     <input type="text" id="name" name="name"  [value]="username" readonly>
   </div>
   <div class="form-group">
-    <label for="email">Email :</label> 
+    <label for="email">Email</label> 
     <input type="email" id="email" [value]="email" readonly>
   </div>
   <div class="form-group">
-    <label for="country">Country :</label>
-    <input type="text" id="country" name="Country" placeholder="country"> </div>
+    <label for="country">Country</label>
+    <input type="text" id="country" name="Country" formControlName="country" placeholder="country"> </div>
   <div class="form-group">
-    <label for="phone">Phone Number :</label>
-    <input type="text" id="phone" name="phone" placeholder="phone number">
+    <label for="phone">Phone Number</label>
+    <input type="text" id="phone" name="phone" formControlName="phone" placeholder="phone number">
   </div>
   <button type="submit">save changes</button>
 </form>
-    
+</div>
 
 
     

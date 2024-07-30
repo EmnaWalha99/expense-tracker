@@ -8,7 +8,7 @@ export class AuthService {
 
   constructor() { }
   httpClient =inject(HttpClient);
-  baseUrl='http://localhost:3001';
+  baseUrl='http://localhost:3002';
   //consistant key for local storage
   localStorageKey='authUser';
   signup(data: any){
@@ -17,9 +17,11 @@ export class AuthService {
 
   }
   login(data: any) {
+    
     return this.httpClient.post(`${this.baseUrl}/login`, data)
       .pipe(tap((result: any) => {
         localStorage.setItem('authUser', JSON.stringify(result.user));
+        //localStorage.setItem('authUser',JSON.stringify.);
       }));
   }
   
@@ -35,23 +37,11 @@ export class AuthService {
     const userJson = localStorage.getItem(this.localStorageKey);
     return userJson ? JSON.parse(userJson) : null;
   }
-  /*
-  async getUserId() {
-    const user = this.getUser();
-    if (user) {
-      try {
-        const response = await firstValueFrom(
-          this.httpClient.get<{ id: number }>(`${this.baseUrl}/user/${user.email}`)
-        );
-        return response.id;
-      } catch (error) {
-        console.error('Error fetching user ID:', error);
-        return null;
-      }
-    } else {
-      return null;
-    }
-  }*/
+  addinfo(data :any){
+    return this.httpClient.post(`${this.baseUrl}/addinfo`, data)
+
+  }
+  
   
   
 

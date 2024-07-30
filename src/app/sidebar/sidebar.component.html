@@ -7,17 +7,20 @@
 <div class="sidebar">
   <header>OnBudget</header>
   <ul>
-    <li><a href="/profile"><i class="fas fa-user"></i> Profile</a></li>
-    <li><a href="/insights"><i class="fas fa-chart-line"></i> Insights</a></li>
-    <li><a href="addexpense"><i class="fas fa-plus-circle"></i> Add Expense</a></li>
+    <li><a href="/profile"><i class="fas fa-user"></i> <span>Profile</span></a></li>
+    <li><a href="/track-expenses"><i class="fas fa-wallet"></i><span>Payments</span></a></li>
+
+    <li><a href="/insights"><i class="fas fa-chart-line"></i><span> Insights</span></a></li>
+
+    <li><a href="addexpense"><i class="fas fa-plus-circle"></i> <span>Add Expense</span></a></li>
 
    <!-- <li><a href="#"><i class="fas fa-money-bill-wave"></i> Expenses</a></li>-->
-    <li><a href="/scanreceipt"><i class="fas fa-receipt"></i> Scan Receipts</a></li>
-    <li><a href="#"><i class="fas fa-bullseye"></i> Financial Goals</a></li>
-    <li><a href="#"><i class="fas fa-calendar"></i> Calendar</a></li>
+    <li><a href="/scanreceipt"><i class="fas fa-receipt"></i><span> Scan Receipts</span></a></li>
+    <li><a href="#"><i class="fas fa-bullseye"></i><span> Financial Goals</span></a></li>
+    <li><a href="#"><i class="fas fa-calendar"></i> <span>Calendar</span></a></li>
   </ul>
   <div id="signout-btn" class="signout-btn">
-    <a class="signout-btn" (click)="logout()"><i class="fas fa-sign-out-alt"  ></i> Sign Out </a>
+    <a class="signout-btn" (click)="logout()"><i class="fas fa-sign-out-alt"  ></i> <span>Sign Out</span> </a>
   </div>
 </div>
 

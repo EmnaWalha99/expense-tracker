@@ -1,0 +1,90 @@
+.container {
+    position: absolute; /* or relative, depending on context */
+    left: 250px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    
+    border-radius: 10px;
+    background-color: #c4e4d5; /* Example background color */
+    padding: 20px; /* Optional, adjust as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional, for depth */
+}
+
+@media (max-width: 768px) {
+    .container{
+        left: 200px;
+    }
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+header {
+   /* background-color: #ab7055;*/
+    color:black;
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+h2 {
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    
+    
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+thead {
+    background-color:rgb(209, 173, 229);
+    
+    
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f7f6f2;
+   
+    
+}
+
+/* Messages */
+p {
+    color: #737171;
+}

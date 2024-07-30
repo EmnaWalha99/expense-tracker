@@ -1,18 +1,77 @@
 .container {
-    position: absolute; /* or relative, depending on context */
-    left: 260px;
-    top: 10px;
-    bottom: 10px;
-    right: 10px;
-    
+    position: absolute;
+    left: 250px;
+    top: 0;
+    bottom: 0;
+    right: 0;
     border-radius: 10px;
-    background-color: #f0f0f0; /* Example background color */
-    padding: 20px; /* Optional, adjust as needed */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional, for depth */
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {
-    .container{
+    .container {
         left: 200px;
     }
+    header {
+        font-size:25px;
+    }
+    input[type="file"]{
+        float: left;
+    }
+    button{
+        font-size:small;
+    }
+    
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    padding-top: 100px;
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 50px;
+    color: #092b19;
+    font-weight: 900;
+}
+
+.form-group {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    flex-direction: column; /* Align items vertically */
+}
+
+input[type="file"] {
+    width: 65%;
+    font-size: 16px;
+    padding-left: 20px;
+    border: 1px solid #f8f1f1;
+    border-radius: 17px;
+    box-sizing: border-box;
+    height: 50px;
+    margin-left:200px;
+}
+
+button[type="submit"] {
+    background-color: #092b19;
+    color: antiquewhite;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 10px; /* Optional spacing */
+}
+
+button[type="submit"]:hover {
+    background-color: #125531;
 }
